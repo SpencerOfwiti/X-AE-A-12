@@ -7,12 +7,17 @@ license = "MIT"
 readme = "README.md"
 homepage = "https://github.com/SpencerOfwiti/X-AE-A-12"
 repository = "https://github.com/SpencerOfwiti/X-AE-A-12"
-keywords = ["X-AE-A-12"]
+keywords = ["X-AE-A-12", "X AE A-12"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
+click = "^7.1.2"
+requests = "^2.23.0"
 
 [tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+x_ae_a_12 = "x_ae_a_12.console:main"
 
 [build-system]
 requires = ["poetry>=0.12"]
