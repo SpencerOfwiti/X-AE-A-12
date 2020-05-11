@@ -1,21 +1,26 @@
 import textwrap
-import click
-import requests
-from . import __version__
 
-API_URL = "https://en.wikipedia.org/api/rest_v1/page/random/summary"
+import click
+
+from . import __version__, wikipedia
 
 
 @click.command()
+@click.option(
+	"--language",
+	"-l",
+	default="en",
+	help="Language edition of Wikipedia",
+	metavar="LANG",
+	show_default=True,
+)
 @click.version_option(version=__version__)
-def main():
+def main(language):
 	"""
 	The X AE A-12 Python project.
 	:return:
 	"""
-	with requests.get(API_URL) as response:
-		response.raise_for_status()
-		data = response.json()
+	data = wikipedia.random_page(language=language)
 
 	title = data["title"]
 	extract = data["extract"]
