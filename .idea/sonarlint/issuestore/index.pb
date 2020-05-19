@@ -20,3 +20,9 @@ A
 tests/conftest.py,6/2/626af34e8204774ea46e20955936146dedc828eb
 G
 tests/test_wikipedia.py,2/f/2f441398ff0fab948abe96f1b0167f22d2c2f7c2
+G
+.pre-commit-config.yaml,e/7/e7d14d429f898757a423156de0e8c49d75240694
+7
+.flake8,3/a/3ac517dad11a750eb4733a0cf5eb375d247f3116
+8
+mypy.ini,4/e/4e4336a100ab92aff37fc784daba7865edad7708
