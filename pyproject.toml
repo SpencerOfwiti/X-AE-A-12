@@ -13,6 +13,9 @@ keywords = ["X-AE-A-12", "X AE A-12", "x-ae-a-12", "x ae a-12"]
 python = "^3.7"
 click = "^7.1.2"
 requests = "^2.23.0"
+desert = "^2020.1.6"
+marshmallow = "^3.6.0"
+pytest-mock = "^3.1.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.4.2"
@@ -26,6 +29,10 @@ flake8-black = "^0.1.1"
 flake8-bugbear = "^20.1.4"
 flake8-import-order = "^0.18.1"
 safety = "^1.9.0"
+mypy = "^0.770"
+pytype = {version = "^2020.5.13", python = "3.7"}
+typeguard = "^2.7.1"
+flake8-annotations = "^2.1.0"
 
 [tool.poetry.scripts]
 x-ae-a-12 = "x_ae_a_12.console:main"
@@ -35,7 +42,7 @@ source = ["src", "*/site-packages"]
 
 [tool.coverage.run]
 branch = true
-source = ["x_ae_a_12"]
+source = ["src.x_ae_a_12"]
 
 [tool.coverage.report]
 show_missing = true
