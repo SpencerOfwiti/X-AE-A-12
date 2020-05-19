@@ -1,7 +1,11 @@
+from unittest.mock import Mock
+
+from _pytest.config import Config
 import pytest
+from pytest_mock import MockFixture
 
 
-def pytest_configure(config):
+def pytest_configure(config: Config) -> None:
     """
 	Pytest configuration hook.
 	:param config:
@@ -11,7 +15,7 @@ def pytest_configure(config):
 
 
 @pytest.fixture
-def mock_requests_get(mocker):
+def mock_requests_get(mocker: MockFixture) -> Mock:
     """
 	Fixture for mocking requests.get.
 	:param mocker:

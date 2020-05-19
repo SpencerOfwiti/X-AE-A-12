@@ -1,11 +1,15 @@
+from unittest.mock import Mock
+
 import click.testing
+from click.testing import CliRunner
 import pytest
+from pytest_mock import MockFixture
 import requests
 from src.x_ae_a_12 import console
 
 
 @pytest.fixture
-def runner():
+def runner() -> CliRunner:
     """
 	Fixture for invoking command-line interfaces.
 	:return:
@@ -14,7 +18,7 @@ def runner():
 
 
 @pytest.fixture
-def mock_wikipedia_random_page(mocker):
+def mock_wikipedia_random_page(mocker: MockFixture) -> Mock:
     """
 	Fixture for mocking wikipedia.random_page.
 	:param mocker:
@@ -23,7 +27,7 @@ def mock_wikipedia_random_page(mocker):
     return mocker.patch("src.x_ae_a_12.wikipedia.random_page")
 
 
-def test_main_succeeds(runner, mock_requests_get):
+def test_main_succeeds(runner: CliRunner, mock_requests_get: Mock) -> None:
     """
 	Test it exits with a status code of 0.
 	:param runner:
@@ -34,7 +38,7 @@ def test_main_succeeds(runner, mock_requests_get):
     assert result.exit_code == 0
 
 
-def test_main_prints_title(runner, mock_requests_get):
+def test_main_prints_title(runner: CliRunner, mock_requests_get: Mock) -> None:
     """
 	Test it prints the title of the wikipedia page.
 	:param runner:
@@ -45,7 +49,7 @@ def test_main_prints_title(runner, mock_requests_get):
     assert "Lorem Ipsum" in result.output
 
 
-def test_main_invokes_request_get(runner, mock_requests_get):
+def test_main_invokes_request_get(runner: CliRunner, mock_requests_get: Mock) -> None:
     """
 	Test it invokes requests.get.
 	:param runner:
@@ -56,7 +60,7 @@ def test_main_invokes_request_get(runner, mock_requests_get):
     assert mock_requests_get.called
 
 
-def test_main_uses_en_wikipedia_org(runner, mock_requests_get):
+def test_main_uses_en_wikipedia_org(runner: CliRunner, mock_requests_get: Mock) -> None:
     """
 	Test it uses English Wikipedia by default.
 	:param runner:
@@ -68,7 +72,9 @@ def test_main_uses_en_wikipedia_org(runner, mock_requests_get):
     assert "en.wikipedia.org" in args[0]
 
 
-def test_main_fails_on_request_error(runner, mock_requests_get):
+def test_main_fails_on_request_error(
+    runner: CliRunner, mock_requests_get: Mock
+) -> None:
     """
 	Test it exits with a non-zero status code if the request fails.
 	:param runner:
@@ -80,7 +86,9 @@ def test_main_fails_on_request_error(runner, mock_requests_get):
     assert result.exit_code == 1
 
 
-def test_main_prints_message_on_request_error(runner, mock_requests_get):
+def test_main_prints_message_on_request_error(
+    runner: CliRunner, mock_requests_get: Mock
+) -> None:
     """
 	Test it prints an error message if the request fails.
 	:param runner:
@@ -92,7 +100,9 @@ def test_main_prints_message_on_request_error(runner, mock_requests_get):
     assert "Error" in result.output
 
 
-def test_main_uses_specified_language(runner, mock_wikipedia_random_page):
+def test_main_uses_specified_language(
+    runner: CliRunner, mock_wikipedia_random_page: Mock
+) -> None:
     """
 	Test it uses the specified edition of Wikipedia.
 	:param runner:
@@ -104,7 +114,7 @@ def test_main_uses_specified_language(runner, mock_wikipedia_random_page):
 
 
 @pytest.mark.e2e
-def test_main_succeeds_in_production_env(runner):
+def test_main_succeeds_in_production_env(runner: CliRunner) -> None:
     """
 	Test it exits with a status code of zero (end-to-end)
 	:param runner:
