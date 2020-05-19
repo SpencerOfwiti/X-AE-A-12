@@ -68,6 +68,9 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 
+# Type checking
+.pytype
+
 # Translations
 *.mo
 *.pot
