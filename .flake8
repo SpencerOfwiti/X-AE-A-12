@@ -1,8 +1,9 @@
 [flake8]
-select = ANN, B, B9, BLK, C, E, F, I, S, W
+select = ANN, B, B9, BLK, C, D, DAR, E, F, I, S, W
 ignore = E101, E203, E501, W191, W503
 max-complexity = 10
 max-line-length = 80
 application-import-names = x_ae_a_12, tests
 import-order-style = google
 per-file-ignores = tests/*:S101
+docstring-convention = google
