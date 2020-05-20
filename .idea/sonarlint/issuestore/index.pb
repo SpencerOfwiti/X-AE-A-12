@@ -26,3 +26,6 @@ G
 .flake8,3/a/3ac517dad11a750eb4733a0cf5eb375d247f3116
 8
 mypy.ini,4/e/4e4336a100ab92aff37fc784daba7865edad7708
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
