@@ -29,3 +29,15 @@ G
 :
 
 .gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
+9
+	.darglint,8/d/8d07aa3c2f1e40c9ddce8bd45758a8e0c30c8bcb
+@
+docs/license.rst,5/d/5d93bd6bdc25d2f406e1e312695ade624b99ae34
+F
+docs/_build/index.html,3/2/32a64a9962a499c8f8cfec1db317910649379a6d
+<
+docs/conf.py,2/5/254a2da7a740675e537439eb88e32083b9ea4771
+B
+docs/reference.rst,b/e/be5232b6a0d98a443861b4640dd454e46c8c70b3
+>
+docs/index.rst,d/0/d0153cac95479af9bfb99b746b633bc8255bb53a
