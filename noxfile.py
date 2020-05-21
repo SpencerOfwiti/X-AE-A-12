@@ -8,13 +8,11 @@ from nox.sessions import Session
 package = "x_ae_a_12"
 locations = "src", "tests", "noxfile.py", "docs/conf.py"
 nox.options.sessions = (
-    "coverage",
     "lint",
     "mypy",
     "pytype",
     "safety",
     "tests",
-    "typeguard",
 )
 
 
