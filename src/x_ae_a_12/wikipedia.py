@@ -43,7 +43,7 @@ def random_page(language: str = "en") -> Page:
 
     Example:
         >>> from x_ae_a_12 import wikipedia
-        >>> page = wikipedia.random_page(language="en")
+        >>> page = wikipedia.random_page(language="sw")
         >>> bool(page.title)
         True
     """
