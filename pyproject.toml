@@ -48,7 +48,7 @@ source = ["src", "*/site-packages"]
 
 [tool.coverage.run]
 branch = true
-source = ["src.x_ae_a_12"]
+source = ["x_ae_a_12"]
 
 [tool.coverage.report]
 show_missing = true
