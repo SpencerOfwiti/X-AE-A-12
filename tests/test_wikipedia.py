@@ -8,9 +8,9 @@ from src.x_ae_a_12 import wikipedia
 
 def test_random_page_uses_given_language(mock_requests_get: Mock) -> None:
     """It selects the specified Wikipedia language edition."""
-    wikipedia.random_page(language="de")
+    wikipedia.random_page(language="sw")
     args, _ = mock_requests_get.call_args
-    assert "de.wikipedia.org" in args[0]
+    assert "sw.wikipedia.org" in args[0]
 
 
 def test_random_page_returns_page(mock_requests_get: Mock) -> None:
