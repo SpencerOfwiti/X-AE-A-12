@@ -7,7 +7,15 @@ from nox.sessions import Session
 
 package = "x_ae_a_12"
 locations = "src", "tests", "noxfile.py", "docs/conf.py"
-nox.options.sessions = "lint", "mypy", "pytype", "safety", "test", "typeguard"
+nox.options.sessions = (
+    "coverage",
+    "lint",
+    "mypy",
+    "pytype",
+    "safety",
+    "tests",
+    "typeguard",
+)
 
 
 def install_with_constraints(session: Session, *args: str, **kwargs: Any) -> None:
@@ -106,7 +114,7 @@ def safety(session: Session) -> None:
 
 
 @nox.session(python=["3.8", "3.7"])
-def test(session: Session) -> None:
+def tests(session: Session) -> None:
     """Run the test suite."""
     args = session.posargs or ["--cov", "-m", "not e2e"]
     session.run("poetry", "install", "--no-dev", external=True)
