@@ -1,10 +1,10 @@
 """The X-AE-A-12 Python project."""
 try:
-    from importlib.metadata import version, PackageNotFoundError
-except ImportError:
-    from importlib_metadata import version, PackageNotFoundError
+    from importlib.metadata import version, PackageNotFoundError  # type: ignore
+except ImportError:  # pragma: no cover
+    from importlib_metadata import version, PackageNotFoundError  # type: ignore
 
 try:
     __version__ = version(__name__)
-except PackageNotFoundError:
+except PackageNotFoundError:  # pragma: no cover
     __version__ = "unknown"
