@@ -17,7 +17,7 @@ from . import __version__, wikipedia
 )
 @click.version_option(version=__version__)
 def main(language: str) -> None:
-    """The X AE A-12 Python project."""
+    """The X-AE-A-12 Python project."""
     page = wikipedia.random_page(language=language)
 
     click.secho(page.title, fg="green")

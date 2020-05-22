@@ -1,4 +1,4 @@
-The X AE A-12 Python Project
+The X-AE-A-12 Python Project
 ============================
 
 .. toctree::
@@ -14,7 +14,7 @@ using the `Wikipedia API <https://en.wikipedia.org/api/rest_v1/#/>`_.
 Installation
 ------------
 
-To run the X AE A-12 Python Project,
+To run the X-AE-A-12 Python Project,
 run this command in your terminal:
 
 .. code-block:: console
@@ -24,7 +24,7 @@ run this command in your terminal:
 Usage
 -----
 
-X AE A-12's usage looks like:
+X-AE-A-12's usage looks like:
 
 .. code-block:: console
 

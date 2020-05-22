@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "x-ae-a-12"
 version = "0.1.0"
-description = "The X AE A-12 Python project"
+description = "The X-AE-A-12 Python project"
 authors = ["Spencer Ofwiti <maxspencer56@gmail.com>"]
 license = "MIT"
 readme = "README.md"
