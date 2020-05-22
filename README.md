@@ -10,7 +10,7 @@
 [![contributors](https://img.shields.io/github/contributors/SpencerOfwiti/X-AE-A-12.svg)](https://github.com/SpencerOfwiti/X-AE-A-12/contributors)
 
 Command line application for displaying random facts from wikipedia on the console.
-Available as a python package on PyPI:
+Available as a python package on [PyPI](https://pypi.org/project/x-ae-a-12/):
 ```
 pip install x-ae-a-12
 ```
@@ -108,9 +108,14 @@ To set up virtual environment and install dependencies:
 poetry install
 ```
 
-To run application:
+To run application (by default the English language edition is selected):
 ```
 poetry run x-ae-a-12
+```
+
+To run Swahili language edition:
+```
+poetry run x-ae-a-12 -l sw
 ```
 
 ## Tests
